@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/riyanathariq/101-golang/concurrency"
+	"github.com/riyanathariq/101-golang/cronjob"
 	"os"
 )
 
@@ -16,6 +17,8 @@ func main() {
 	switch os.Args[1] {
 	case "rate_limit":
 		concurrency.RateLimiter()
+	case "cronjob":
+		cronjob.StartCronJob()
 	default:
 		fmt.Println("Unknown model")
 	}
