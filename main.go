@@ -19,6 +19,10 @@ func main() {
 		concurrency.RateLimiter()
 	case "cronjob":
 		cronjob.StartCronJob()
+	case "channeling":
+		concurrency.Channeling()
+	case "mutex":
+		concurrency.Mutex()
 	default:
 		fmt.Println("Unknown model")
 	}
