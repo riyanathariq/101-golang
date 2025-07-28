@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/riyanathariq/101-golang/concurrency"
 	"github.com/riyanathariq/101-golang/cronjob"
+	"github.com/riyanathariq/101-golang/redirect"
 	"os"
 )
 
@@ -19,6 +20,12 @@ func main() {
 		concurrency.RateLimiter()
 	case "cronjob":
 		cronjob.StartCronJob()
+	case "channeling":
+		concurrency.Channeling()
+	case "mutex":
+		concurrency.Mutex()
+	case "redirect":
+		redirect.Redirect()
 	default:
 		fmt.Println("Unknown model")
 	}
